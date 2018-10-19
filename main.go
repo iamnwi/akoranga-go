@@ -13,7 +13,7 @@ func main() {
 	}
 
 	http.HandleFunc("/", func(w http.ResponseWriter, _ *http.Request) {
-		fmt.Fprint(w, "Kia ora from port "+port)
+		fmt.Fprint(w, "Kia ora!\n")
 	})
 	http.ListenAndServe(":"+port, nil)
 }
