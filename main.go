@@ -12,8 +12,10 @@ func main() {
 		port = "8080"
 	}
 
+	hostname, _ := os.Hostname()
 	http.HandleFunc("/", func(w http.ResponseWriter, _ *http.Request) {
-		fmt.Fprint(w, "Kia ora!\n")
+		fmt.Fprintf(w, "[%s] Kia ora!\n", hostname)
 	})
+
 	http.ListenAndServe(":"+port, nil)
 }
