@@ -6,7 +6,7 @@ RUN go build akoranga-go.go
 # RUN
 FROM alpine:edge
 
-ENV PORT 8080
+ENV PORT 80
 
 EXPOSE $PORT
 
